@@ -1,5 +1,5 @@
 from flask import Flask, request
-import Blockchain
+from Blockchain import Blockchain
 import requests
 import json
 
