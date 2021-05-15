@@ -12,3 +12,5 @@ class Block:
     def generate_hash(self):
         block_string = json.dumps(self.__dict__,sort_keys=True)
         return sha256(block_string.encode()).hexdigest()
+
+    #need to find how if there are further optimizations that can be made to this block

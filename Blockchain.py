@@ -20,7 +20,7 @@ class Blockchain:
     difficulty = 2 #testing difficulty level for proof of work
 
     def proof_of_work(self,block):
-        #block.nonce = 0 #not sure what to put here
+        #block.nonce = 0 #pretty sure I dont need this part
         generated_hash = block.generate_hash()
         while not generated_hash.startswith('0' * Blockchain.difficulty):
             block.nonce += 1
