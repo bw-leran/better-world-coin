@@ -19,6 +19,7 @@ class Blockchain:
 
     difficulty = 2 #testing difficulty level for proof of work
 
+    #would like to replace this with a "proof of stake" algorithm instead of "proof of work"
     def proof_of_work(self,block):
         #block.nonce = 0 #pretty sure I dont need this part
         generated_hash = block.generate_hash()
@@ -26,6 +27,10 @@ class Blockchain:
             block.nonce += 1
             generated_hash = block.generate_hash()
         return generated_hash
+
+    def proof_of_stake(self,block):
+        pass
+    #implementing "proof of stake" algorithm to replace "proof of work". Func is incomplete rn.
 
     def add_block(self,block,proof):
         previous_hash = self.last_block.hash
